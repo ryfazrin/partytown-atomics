@@ -1,11 +1,10 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 8080
 
-var path = require('path');
-var public = __dirname + '/public/';
+var path = require('path')
+var public = __dirname + '/public/'
 
-// app.use('/', express.static(public))
 app.use('/', express.static('public', {
   setHeaders: function(res, path) {
     res.set({
@@ -23,6 +22,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(public + 'index.html'))
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.listen(port)
+
+// Export the Express API
+module.exports = app
