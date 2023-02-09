@@ -1,11 +1,12 @@
 {
   "name": "partytown-atomics",
   "version": "1.0.0",
-  "description": "",
+  "description": "Partytown with atomics comunication",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "partytown": "partytown copylib public/~partytown"
   },
   "keywords": [],
   "author": "",
